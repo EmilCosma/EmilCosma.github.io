@@ -44,7 +44,7 @@ const logoutButton = document.querySelector('#logout a');
 
         if (data.is_admin) {
             const adminLink = document.createElement('a');
-            adminLink.href = '../Admin_page/admin_page.html';
+            adminLink.href = '../Admin_Page/admin_page.html';
             adminLink.textContent = 'Admin Page';
             adminLink.style.textDecoration = 'none';
             adminLink.style.outline = 'none';
