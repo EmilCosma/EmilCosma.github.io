@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoT</title>
+    <link rel="stylesheet" href="stylesheet_help_page.css">
+    <link rel="stylesheet" href="../stylesheet_footer.css">
+    <link rel="stylesheet" href="../stylesheet_header.css">
+    <link rel="icon" href="../images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="first-part-header">
+            <a href="../index.html"><img id="logo" src="../images/logo.png" alt="Logo"></a>
+            <h1>Romanian Traffic Signs Tutor</h1>
+            <p id="account"><a href="../Login_Page/login_page.html" id="account-button">Account</a></p>
+        </div>
+        <div class="border">
+            <ul id="unordered-list-border">
+                <li class="unordered-list-border-item"><a class="top-button" href="../index.html">BACK</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <h2 id="title">Manual de navigare site</h2>
+                <div id="chapters">
+                    <h3 id="chapters-title">Cuprins</h3>
+                    <ol>
+                        <li><a href="#main-page">Pagina principala</a></li>
+                        <ul class="subsection">
+                            <li><a href="#main-page-account-button">Butonul Account</a></li>
+                            <li><a href="#main-page-best-users">Topul utilizatorilor</a></li>
+                        </ul>
+                        <li><a href="#about-page">Despre noi</a></li>
+                        <li><a href="#learning-theory">Invata regulile rutiere</a></li>
+                        <ul class="subsection">
+                            <li><a href="#learning-theory-item1">Invata regulile de circulatie</a></li>
+                            <li><a href="#learning-theory-item2">Invata semnele de circulatie</a></li>
+                        </ul>
+                        <li><a href="#questionnaires">Aplica cunostintele invatate</a></li>
+                    </ol>
+                </div>
+            <h3 class="chapter" id="main-page">1. Pagina principala</h3>
+            <p class="chapter-paragraph">Pagina principala ofera utilizatorului diferite butoane ce au ca scop navigarea confortabila si cat mai eficienta in cadrul 
+                aplicatiei Romanian Traffic Signs Tutor.</p>
+            <h4 class="sub-chapter" id="main-page-acount-button">1.1 Butonul Account</h4>
+            <p class="sub-chapter-paragraph">In header in partea dreapta exista butonul "Account". Acest buton are ca scop creaarea unui cont in cazul in care utilizatorul 
+                nu este deja inregistrat sau conectarea la contul existent al acestuia. D e asemenea, in momentul in care utilizatorul este 
+                conectat acest buton va servi ca acces la pagina de profil a acestuia. In pagina de profil sunt prezentate informatiile contului, 
+                dar si statistici despre evolutia inregistrata in partea de rezolvare de chestionare a aplicatiei.</p>
+            <h4 class="sub-chapter" id="main-page-best-users">1.2 Topul utilizatorilor</h4>
+            <p class="sub-chapter-paragraph">Ultima sectiune a paginii principale prezinta un "Top 5 utilizatori" in care sunt specificati cei mai harnici 5 utilizatori inregistrati.</p>
+            <h3 class="chapter" id="about-page">2.Despre noi</h3>
+            <p class="chapter-paragraph">Acest buton are ca scop introducerea unei pagini informative ce prezinta scopul aplicatiei, dar si istoria si reusitele acesteia, 
+                demonstrand de-a lungul timpului ajutorul semnificativ in trecerea examenului teoretic pentru permisul de conducere.
+            </p>
+            <h3 class="chapter" id="learning-theory">3. Invata regulile rutiere</h3>
+            <p class="chapter-paragraph">Aceasta sectiune este dedicata invatarii tuturor informatiilor necesare pentru promovarea examenului teoretic. Este impartita in doua categorii.</p>
+            <h4 class="sub-chapter" id="learning-theory-item1">3.1 Invata regulile de circulatie</h4>
+            <p class="sub-chapter-paragraph">Pagina ce contine regulile de circulatie.</p>
+            <h4 class="sub-chapter" id="learning-theory-item2">3.2 Invata semnele de circulatie</h4>
+            <p class="sub-chapter-paragraph">Pagina ce contine semnele de circulatie. Acestea sunt impartite in mai multe categorii si prezentate intr-un mod organizat pentru a 
+                facilita invatarea rapida si eficienta a acestora.</p>
+            <h3 class="chapter" id="questionnaires">4. Aplica cunostintele invatate</h3>
+            <p class="chapter-paragraph">Aceasta sectiune este dedicata pentru aplicarea cunostintelor teoretice dobandite in sectiunea prezentata la 
+                <a href="#learning-theory">punctul 3</a>. Aici pot fi gasite chestionare de 3 nivele de dificultate : scazut, mediu si ridicat.
+                 In functie de ce este ales, vor fi propuse chestionare de dificultatea selectata.</p>
+        </div>
+    </main>
+    <footer>    
+        <div class="divider_footer"></div>
+        <p class="copyrights">@Copyright Emil&Vero srl. All rights reserved</p>
+        <p class="footer_text">Contact:</p>
+        <p class="footer_text">Emil: cosmaemil1414@gmail.com</p>
+        <p class="footer_text">Veronica: capleaveronica29@gmail.com</p>
+    </footer>
+    <script>
+        const accountButton = document.getElementById('account-button');
+        const token = localStorage.getItem('token');
+        const questionnaireButton=document.getElementById('questionnaire_button');
+        if (token) {
+            accountButton.href = '../Profile_Page/profile_page.html';
+        }
+    </script>
+</body>

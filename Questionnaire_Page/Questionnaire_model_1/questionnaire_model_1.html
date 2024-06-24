@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoT</title>
+    <link rel="stylesheet" href="stylesheet_questionnaire_model_1.css">
+    <link rel="stylesheet" href="../stylesheet_footer.css">
+    <link rel="stylesheet" href="../stylesheet_header.css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="first-part-header">
+            <a href="../../index.html"><img id="logo" src="images/logo.png" alt="Logo"></a>
+            <h1>Romanian Traffic Signs Tutor</h1>
+            <p id="account"><a href="../../Account_Button_Page/account_button_page.html" id="account-button">Account</a></p>
+        </div>
+        <div class="border">
+            <ul id="unordered-list-border">
+                <li class="unordered-list-border-item"><a class="top-button" href="../questionnaire_page.html">BACK</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="questionnaire-info">
+            <h2 id="mistakes">Intrebari gresite: 2/6</h2>
+            <h2 id="timer"></h2>
+        </div>
+        <div class="main-section">
+            <div class="info-section">
+                <h2 id="left">Intrebari raspunse : 12</h2>
+                <h2 id="center">Intrebarea 3 </h2>
+                <h2 id="right">Intrebari ramase : 14</h2>
+            </div>
+            <h2 id="question"></h2>
+            <img class="image" src="images/politist_intersectie.jpg" alt="Poza corespunzatoare intrebarii prezentate.">
+            <div class="answers">
+                <div class="answer-item">
+                    <p class="option">A</p>
+                    <div id="option1" class="answer"></div>
+                </div>
+                <div class="answer-item">
+                    <p class="option">B</p>
+                    <div id="option2" class="answer"></div>
+                </div>
+                <div class="answer-item">
+                    <p class="option">C</p>
+                    <div id="option3" class="answer"></div>
+                </div>
+            </div>
+            <p id="hint">Nu te descurci? Hai sa iti dau un indiciu! Ramane secret!</p>
+        </div>
+        <div class="change-question">
+            <h2 id="previous-question"><a href="#" class="another-question">Intrebarea anterioara</a></h2>
+            <h2 id="next-question"><a href="../Questionnaire_model_2/questionnaire_model_2.html" class="another-question">Intrebarea urmatoare</a></h2>
+        </div>
+    </main>
+    <footer>    
+        <div class="divider_footer"></div>
+        <p class="copyrights">@Copyright Emil&Vero srl. All rights reserved</p>
+        <p class="footer_text">Contact:</p>
+        <p class="footer_text">Emil: cosmaemil1414@gmail.com</p>
+        <p class="footer_text">Veronica: capleaveronica29@gmail.com</p>
+    </footer>
+    <div id="popup" class="popup"></div>
+    <script src="../popup.js"></script>
+    <script src="../select_option.js"></script>
+    <script src="../timer.js"></script>
+    <script src="questionnaire_script.js"></script>
+</body>

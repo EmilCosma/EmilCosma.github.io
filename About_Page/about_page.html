@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoT</title>
+    <link rel="stylesheet" href="stylesheet_about_page.css">
+    <link rel="stylesheet" href="../stylesheet_footer.css">
+    <link rel="stylesheet" href="../stylesheet_header.css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="first-part-header">
+            <a href="../index.html"><img id="logo" src="../images/logo.png" alt="Logo"></a>
+            <h1>Romanian Traffic Signs Tutor</h1>
+            <p id="account"><a href="../Login_Page/login_page.html" id="account-button">Account</a></p>
+        </div>
+        <div class="border">
+            <ul id="unordered-list-border">
+                <li class="unordered-list-border-item"><a class="top-button" href="../index.html">BACK</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <h2 id="title">Despre noi</h2>
+            <p class="introduction">Bine ați venit pe site-ul nostru dedicat învățării regulilor de circulație, semnelor de trafic și 
+                testării cunoștințelor prin chestionare interactive.</p>
+            <p class="introduction">Suntem doi studenți pasionați de informatică de la Facultatea de Informatică a Universității Alexandru 
+                Ioan Cuza, motivați de dorința de a face educația rutieră mai accesibilă și captivantă.</p>
+            <h3>Misiunea noastra</h3>
+            <p class="paragraph">Misiunea noastră este să oferim o platformă eficientă și prietenoasă pentru persoanele care doresc să obțină permisul de 
+                conducere. Credem că o înțelegere solidă a regulilor de circulație și a semnelor rutiere este esențială pentru siguranța 
+                pe drumuri și ne străduim să oferim cele mai bune resurse pentru a vă sprijini în procesul de învățare.</p>
+            <h3>De ce să Alegeți Site-ul Nostru?</h3>
+            <ul class="subsection">
+                <li><span>Învățare Completă:</span> Acoperim toate subiectele esențiale legate de regulile de circulație și semnele rutiere, 
+                    asigurându-vă că aveți toate informațiile necesare.</li>
+                <li><span>Chestionare Interactive:</span> Testați-vă cunoștințele cu ajutorul chestionarelor noastre special concepute, care 
+                    simulează întrebările din examenul auto real.</li>
+                <li><span>Interfață Prietenoasă:</span> Platforma noastră este proiectată pentru a fi intuitivă și ușor de navigat, făcând experiența 
+                    de învățare plăcută și eficientă.</li>
+            </ul>
+        </div>
+    </main>
+    <footer>    
+        <div class="divider_footer"></div>
+        <p class="copyrights">@Copyright Emil&Vero srl. All rights reserved</p>
+        <p class="footer_text">Contact:</p>
+        <p class="footer_text">Emil: cosmaemil1414@gmail.com</p>
+        <p class="footer_text">Veronica: capleaveronica29@gmail.com</p>
+    </footer>
+    <script>
+        const accountButton = document.getElementById('account-button');
+        const token = localStorage.getItem('token');
+        const questionnaireButton=document.getElementById('questionnaire_button');
+        if (token) {
+            accountButton.href = '../Profile_Page/profile_page.html';
+            questionnaireButton.href = 'Questionnaire_Page/questionnaire_page.html';
+        }
+    </script>
+</body>

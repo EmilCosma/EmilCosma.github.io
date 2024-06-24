@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheet_readme.css" />
+</head>
+<body>
+<article>
+    <header>
+        <h1>
+            RoT (Romanian Traffic Signs Tutor)
+        </h1>
+    </header>
+    <h2>Cuprins</h2>
+    <ol>
+        <li><a href="#introducere">Introducere</a></li>
+        <li><a href="#scop-si-obiective">Scop si obiective</a></li>
+        <li><a href="#functionalitati-principale">Funcționalități principale</a></li>
+        <li><a href="#detalii-tehnice">Detalii tehnice</a></li>
+        <li><a href="#structura">Structura </a></li>
+        <ul class="subsection">
+            <li><a href="#structura-de-baza">Structura de bază a paginii</a></li>
+            <li><a href="#tehnologii-utilizate">Tehnologii utilizate</a></li>
+            <li><a href="#pagini">Pagini si experienta utilizatorului</a></li>
+        </ul>
+        <li><a href="#stiluri-css">Stiluri CSS globale</a></li>
+        <ul class="subsection">
+            <li><a href="#elemente-header">Elemente comune pentru header</a></li>
+            <li><a href="#elemente-footer">Elemente comune pentru footer</a></li>
+            <li><a href="#elemente-butoane">Butoane comune pentru tipurile de indicatoare</a></li>
+        </ul>
+        <li><a href="#arhitectura-aplicatiei">Arhitectura aplicatiei</a></li>
+        <li><a href="#stocare-cod">Stocarea codului aplicatiei</a></li>
+        <li><a href="#echipa">Echipa</a></li>
+        <li><a href="#masuri-securitate">Masuri de securitate</a></li>
+        <li><a href="#resurse">Resurse</a></li>
+        <li><a href="#concluzie">Concluzii</a></li>
+    </ol>
+    <h2>Autori</h2>
+    <ul>
+        <li>Emil Cosma
+        <ul>
+            <li>
+                <a href="mailto:cosmaemil1414@gmail.com" property="schema:email">cosmaemil1414@gmail.com</a>
+            </li>
+        </ul>
+        </li>
+        <li>Caplea Veronica
+        <ul>
+            <li>
+                <a href="mailto:capleaveronica29@gmail.com" property="schema:email">capleaveronica29@gmail.com</a>
+            </li>
+        </ul>     
+    </ul>
+        <h2 id="introducere">1. Introducere</h2>
+            <p>
+                Proiectul nostru de dezvoltare web are ca obiectiv crearea unei platforme online dedicate învățării semnelor rutiere și a legislației de circulație, adresându-se unui public divers, ce cuprinde atât persoanele care se pregătesc pentru obținerea permisului de conducere, cât și șoferii cu experiență, pietonii și cicliștii.<br>
+                <br>
+                Site-ul va oferi utilizatorilor informații detaliate și actualizate despre semnele rutiere, regulile de circulație și comportamentul responsabil în trafic. În plus, va include chestionare cu întrebări relevante și variate, concepute pentru a testa cunoștințele și pentru a monitoriza progresul utilizatorilor în mod interactiv.<br>
+                <br>
+                Scopul nostru este de a oferi un mediu accesibil și util pentru îmbunătățirea cunoștințelor și a comportamentului în trafic, contribuind astfel la creșterea gradului de conștientizare și responsabilitate în rândul participanților la trafic și, implicit, la reducerea accidentelor rutiere și îmbunătățirea siguranței pe drumurile publice.
+            </p>
+        <h2 id="scop-si-obiective">2. Scop si obiective</h2>
+        <p>
+            Proiectul nostru de dezvoltare web își propune să ofere o soluție interactivă și informativă pentru învățarea semnelor rutiere și a legislației de circulație. Platforma va oferi acces facil la informații detaliate despre regulile de circulație și semnele rutiere, într-un format prietenos și ușor de înțeles.
+        </p>
+        <h2 id="functionalitati-principale">3. Funcționalități principale</h2>
+        Fiecare utilizator va avea acces la urmatoarele funcționălități:
+        <ul>
+            <li>sa se inregistreze pe site.</li>
+            <li>sa se autentifice pe site</li>
+            <li>să acceseze pagina "Invata regulile rutiere" pentru a accesa codul rutier</li>
+            <li>să acceseze pagina "Invata semnele de circulatie" pentru a vizualiza semne rutiere</li>
+
+            <li>dacă este <b>autentificat</b>, să acceseze pagină "Aplica cunostintele invatate" și să rezolve chestionare</li>
+            <li>dacă este <b>autentificat</b>, să își acceseze profilul și sa verifice statisticile personale</li>
+
+            <li>dacă utilizatorul are rol de <b>admin</b>, acesta poate șterge utilizatori din baza de date</li>
+            <li>dacă utilizatorul are rol de <b>admin</b>, acesta poate adăuga întrebări noi</li>
+            <li>dacă utilizatorul are rol de <b>admin</b>, acesta poate elimina întrebări</li>
+            <li>dacă utilizatorul are rol de <b>admin</b>, acesta poate modifica întrebări deja existente</li>
+            <li>dacă utilizatorul are rol de <b>admin</b>, acesta poate adăuga chestionare noi</li>
+            <li>dacă utilizatorul are rol de <b>admin</b>, acesta poate modifica chestionare deja existente</li>
+        </ul>
+        <h2 id="detalii-tehnice">4. Detalii tehnice</h2>
+        <p><h3>Frontend:</h3> Interfața utilizatorului este dezvoltata folosind HTML, CSS și JavaScript. Se asigura o experiență intuitivă și prietenoasă pentru utilizatori.</p>
+        <h2 id="structura">5.Structura</h2>
+        <h3 id="structura-de-baza">5.1. Structura de bază a paginii</h3>
+    <p>Fiecare pagină HTML a aplicației are o structură de bază comună:</p>
+    <div class="code_container">
+        <code>
+            &lt;!DOCTYPE html&gt;
+            <br>&lt;html&gt;
+            <br>  &lt;head&gt;
+            <br>    &lt;!-- Metadate și legături către fișierele CSS și JavaScript --&gt;
+            <br>  &lt;/head&gt;
+            <br>  &lt;body&gt; <br>
+            &lt;header&gt;<br>
+      &nbsp;&nbsp;&lt;div class="first-part-header"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="..\index.html"&gt;&lt;img id="logo" src="images/logo.png"&gt;&lt;/a&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Romanian Traffic Signs Tutor&lt;/h1&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;p id="account"&gt;&lt;a href="..\Account_Button_Page/account_button_page.html" id="account-button"&gt;Account&lt;/a&gt;&lt;/p&gt;<br>
+      &nbsp;&nbsp;&lt;/div&gt;<br>
+      &nbsp;&nbsp;&lt;div class="border"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a class="top-button" href="..\Select_Between\select_between.html"&gt;BACK&lt;/a&gt;&lt;/li&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+      &nbsp;&nbsp;&lt;/div&gt;<br>
+    &lt;/header&gt;<br>
+            <br>    &lt;!-- Conținutul vizibil al paginii --&gt; <br>
+            <br>&lt;footer&gt;<br>
+      &nbsp;&nbsp;&lt;div class="divider_footer"&gt;&lt;/div&gt;<br>
+      &nbsp;&nbsp;&lt;p class="copyrights"&gt;@Copyright Emil&amp;Vero srl. All rights reserved&lt;/p&gt;<br>
+      &nbsp;&nbsp;&lt;p class="footer_text"&gt;Contact:&lt;/p&gt;<br>
+      &nbsp;&nbsp;&lt;p class="footer_text"&gt;Emil: cosmaemil1414@gmail.com&lt;/p&gt;<br>
+      &nbsp;&nbsp;&lt;p class="footer_text"&gt;Veronica: capleaveronica29@gmail.com&lt;/p&gt;<br>
+    &lt;/footer&gt;<br>
+            <br>  &lt;/body&gt;<br>&lt;/html&gt;
+        </code>
+    </div>
+
+    <h3 id="tehnologii-utilizate">5.2. Tehnologii utilizate</h3>
+    <p>Tehnologiile folosite pentru acest proiect sunt HTML5, CSS, JavaScript (interfata).</p>
+    
+    <h3 id="pagini">5.3. Pagini si experienta utilizatorului</h3>
+
+    <h4>Main page</h4>
+    <p>La aceasta pagina vor avea acces atat utilizatorii autentificati, cat si cei neautentificați.
+         Aceasta va fi prima pagina care apare atunci cand cineva intra pe site. De aici, utilizatorul va putea naviga catre restul paginilor.</p>
+         <img src="images/main_page_1.png" >
+         <img src="images/main_page_2.png" >
+    <h4>Mediu de invatare</h4>
+        Din aceasta pagina utilizatorul poate alege catre a naviga intre pagina cu codul rutier sau cea cu semnele de circulatie.
+        <img src="images/mediu_invatare1.png" >
+        <img src="images/mediu_invatare2.png" >
+    <h4>Invata codul rudier</h4>
+        Aceasta pagina ofera informatii despre codul rutier.
+        <img src="images/reguli_de_circulatie.png">
+    <h4>Invata semnele de circulatie</h4>
+        Aceasta pagina ofera utilizatorului diferite categorii de semne de circulatie din care poate invata.
+        <img src="images/invata_semnele_de_circulatie_1.png" >
+        <img src="images/invata_semnele_de_circulatie_2.png" >
+        <img src="images/invata_semnele_de_circulatie_3.png" >
+    <h4>Chestionare</h4>
+        Aceasta pagina ofera utilizatorului ocazia de a isi testa cunostintele dobandite in mediul de invatare, prin intermediul unor chestionare pe diferite nivele de dificultate.
+        <img src="images/chestionare_1.png" >
+        <img src="images/chestionare_2.png">
+
+    <h4>Profil</h4>
+        Aceasta pagina este vizibila doar utilizatorului autentificat si ofera informatii despre utilizator si progresul acestuia in aplicatie.
+        <img src="images/profil.png" >
+    <h4>Login</h4>
+        Aceasta pagina este destinata autentificarii utilizatorului.
+        <img src="images/login.png" >
+    <h4>Sign-up</h4>
+        Aceasta pagina permite utilizatorului creeare unui cont pe site.
+        <img src="images/signup.png" >
+    <h4>Forgot Password</h4>
+        Aceasta pagina ofera posibilitatea utilizatorului sa iti reseteze parola in caz de a uitat-o. Site-ul trimite un email pentru resetarea acesteia.
+        <img src="images/forgot_password.png">
+    <h4>Admin control page</h4>
+        Din aceasta pagina, un utilizator admin are diferite optiuni de moderare al site-ului.
+        <img src="images/admin_page.png" >
+        
+    <h2 id="stiluri-css">6. Stiluri CSS globale</h2>
+    <p>Pentru a asigura coerența și un aspect uniform, sunt folosite următoarele stiluri CSS globale:</p>
+    <h3 id="elemente-header">6.1 Elemente comune pentru header</h3>
+<div class="code_container">
+    <code>
+        * {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;margin: 0;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;padding: 0;<br>
+        }<br>
+        <br>
+        .first-part-header{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;display : flex;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;align-items: center;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;background-color: rgb(236, 247, 247);<br>
+        }<br>
+        <br>
+        #logo {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;width: max(3.5rem, 7.5vw);<br>
+        }<br>
+        <br>
+        h1 {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;color: rgb(18, 18, 113);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-size: min(4.5vw, 2.5rem);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;width: 90vw;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-family: Tahoma, sans-serif;<br>
+        }<br>
+        <br>
+        #account{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;margin-left: auto;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;margin-right: 20px;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;border: none;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-size: min(2vw, 1.3em);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-family: Helvetica, sans-serif;<br>
+        }<br>
+        <br>
+        #account-button{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;color : rgb(238, 249, 249);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;background-color: #17198e;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;padding : 8px 14px;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 10px;<br>
+        }<br>
+        <br>
+        #account-button:hover{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;color : rgb(236, 247, 247);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;background-color: #2f31a6;<br>
+        }<br>
+        <br>
+        #account-button:active{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;color : rgb(252, 241, 92);<br>
+        }<br>
+        <br>
+        .border{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;background-color: #0e0f7d;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;width : 100vw;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;height: min(13vh, 2.7em);<br>
+        }<br>
+        <br>
+        ul{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;display: flex;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;justify-content: space-evenly;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-family: Helvetica, sans-serif;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;margin : 0;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;padding : 0;<br>
+        }<br>
+        <br>
+        li{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;list-style-type: none;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;padding-top: 0.6em;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;padding-bottom: 0.5em;<br>
+        }<br>
+        <br>
+        .top-button{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;color : rgb(197, 232, 232);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;<br>
+        }<br>
+        <br>
+        .top-button:hover{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;color : white;<br>
+        }<br>
+        <br>
+        .top-button:active {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;color : yellow;<br>
+        }<br>
+    </code>
+</div>
+<h3 id="elemente-footer">6.2 Elemente comune pentru footer</h3>
+<div class="code_container">
+    <code>
+        .divider_footer{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;background-color : #1ca3e638;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;height : 0.5em;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;width: 95%;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;margin: 2em;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom: 1em;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 10px;<br>
+        }<br>
+        <br>
+        footer{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;height: 10vh;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;position: absolute;<br>
+        }<br>
+        <br>
+        .footer_text{<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;font-family: Helvetica;<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;font-size: 0.7rem;<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom: 2px;<br>
+        }<br>
+        <br>
+        .copyrights{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;padding-left: 1rem;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;padding-bottom: 0.3rem;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-family: Helvetica;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 0.8rem;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>
+         }<br>
+    </code>
+</div>
+<h3 id="elemente-butoane">6.3 Butoane comune pentru tipurile de indicatoare</h3>
+<div class="code_container">
+    <code>
+        body{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-family: Helvetica;<br>
+        }<br>
+        <br>
+        .box {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;display: flex;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;flex-wrap: wrap;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;justify-content: space-between;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;width: 80%;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;margin: 20px auto;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;padding: 20px;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;background-color: rgb(193, 223, 244);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 10px;<br>
+        }<br>
+        <br>
+        .button {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;width: min(30vw, 20rem);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;margin: 0 0 3rem 0;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-size: min(1.2rem, 3vw);<br>
+        }<br>
+        <br>
+        .button a {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;display: block;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;color: inherit; <br>
+        }<br>
+        <br>
+        .button img {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;height: auto;<br>
+        }<br>
+        <br>
+        .button h3 {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;margin: 10px 0;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-size: min(1.5rem, 4vw);<br>
+        }<br>
+        <br>
+        .button button {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;background-color: #007bff;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;color: #fff;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;border: none;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;padding: 10px 20px;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 5px;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;cursor: pointer;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;transition: background-color 0.3s ease;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;padding: min(1.2vw, 0.5rem);<br>
+        }<br>
+        <br>
+        .button button:hover {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;background-color: #0056b3;<br>
+        }<br>
+    </code>
+</div>
+<h3 id="elemente-header">6.4 Elemente comune pentru butoanele chestionarelor</h3>
+<div class="code_container">
+    <code>
+        .easy-questionnaire-type{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;display : flex;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;flex-direction: column;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;align-items: center;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;gap : 1rem;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;height : 45rem;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;width: 90%;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;margin : 3rem auto;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;background-color : #1ca3e638;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 15px;<br>
+        }<br>
+        <br>
+        .message{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;display: flex;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;flex-direction: column;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-family: Tahoma, sans-serif;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;color :rgb(48, 48, 154);<br>
+        }<br>
+        <br>
+        h2{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;margin-top: 12px;<br>
+        }<br>
+        <br>
+        h2, h3{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom: 0.5em;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;margin-left: 10px;<br>
+        }<br>
+        <br>
+        .questionnaire-section{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;display : flex;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;flex-direction : column;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;justify-content: center;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;width : min(60vw, 45em);<br>
+        }<br>
+        <br>
+        .big-button{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;display: flex;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;align-items: center;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;width: min(60vw, 45em);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;height : 5em;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;color : rgb(236, 247, 247);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;background-color : #0e107dd5;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 10px;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-family: Helvetica, sans-serif;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;margin-top: 1.5em;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-size: min(2.8vw, 1em);<br>
+        }<br>
+        <br>
+        .big-button:hover{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;background-color: rgba(48, 50, 162, 0.822);<br>
+        }<br>
+        <br>
+        .big-button:active{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;color : yellow;<br>
+        }<br>
+        <br>
+        .button-title{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;margin-left: 10px;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1.5em;<br>
+        }<br>
+        <br>
+        .little-button{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;display: flex;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;align-items: center;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;justify-content: center;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;height: 1.7em;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;width: 6em;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;margin-left: 0.8em;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 5px;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-family: Helvetica, sans-serif;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;background-color: #b9ddf0;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;color: #0e107dd5;<br>
+        }<br>
+        <br>
+        .little-button:hover{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;background-color: #c1e9ff;<br>
+        }<br>
+        <br>
+        .little-button:active{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;background-color: yellow; <br>
+        }<br>
+        <br>
+        .score{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;display: flex;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;align-items: center;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;justify-content: center;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-family: Helvetica, sans-serif;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1.5em;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;margin-left: auto;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;margin-right: 10px;<br>
+        }<br>
+    </code>
+</div>
+
+<h2 id="arhitectura-aplicatiei">7. Arhitectura aplicatiei</h2>
+<p>Componentele aplicatiei:</p>
+<ul>
+    <li>Backend</li>
+    <li>Frontend</li>
+    <li>Baza de date : Firebase</li>
+</ul>
+<h3>Backend</h3>
+<p>Backend-ul aplicatiei este realizat in JavaScript, folosind Node.js. Acesta se ocupa de gestionarea cererilor HTTP, de validarea datelor si de comunicarea cu baza de date. Codul este organizat in functie de domeniul de care face parte aplicatia, astfel sunt implementate entitatile: user, questionnaire, sign. REST API-ul este compus din:</p>
+<ul>
+    <li>[entity] models: query-uri directe in baza de date Firebase.</li>
+    <li>[entity] controllers: logica principala pentru fiecare functionalitate, fiind folosite metodele corespunzatoare din models pentru a primi si a trimite informatiile catre baza de date. Verificarea requesturilor HTTP redirectionate de routes executand verificarile necesare:</li>
+    <ul>
+        <li>Verificare token.</li>
+        <li>Verificarea atribute relevante.</li>
+        <li>Verificarea existentei entitatii in tabel.</li>
+    </ul>
+    <li>[entity] server: definirea rutelor si apeleaza functiile din controllers necesare.</li>
+    <li>Nodemailer: folosit pentru autentificarea la serverul SMTP Google si trimiterea mail-urilor pentru resetarea parolei.</li>
+    <li>Jwt token pentru codarea si decodarea informatiilor de autentificare.</li>
+    <li>Bcrypt pentru criptarea parolelor inainte de a fi stocate in baza de date.</li>
+</ul>
+<h3>Frontend</h3>
+<p>Frontend-ul aplicatiei este realizat in HTML, CSS si JavaScript. Acesta se ocupa de prezentarea informatiilor si de interactiunea cu utilizatorul. Design-ul e responsive si informatii temporare sunt stocate in localStorage pentru a nu forta autentificarea la fiecare pagina securizata.</p>
+<h3>Baza de date</h3>
+<p>Baza de date a aplicatiei este realizata in Firebase. Aceasta stocheaza datele utilizatorilor, intrebarile pentru chestionare si raspunsurile acestora, semnele de circulatie.</p>
+
+<h2 id="stocare-cod">8. Stocarea codului aplicatiei</h2>
+<p>Codul aplicatiei poate fi gasit la adresa: <a href="https://github.com/EmilCosma/Proiect_Web" target="_blank">https://github.com/EmilCosma/Proiect_Web</a>.</p>
+
+<h2 id="echipa">9. Echipa</h2>
+<ul>
+    <li>Caplea Veronica</li>
+    <li>Emil Cosma</li>
+</ul>
+<p>Ambii participanti au contribuit atat la frontend, cat si la backend, impartirea task-urilor fiind una organizata datorita comunicarii eficiente a echipei.</p>
+
+<h2 id="masuri-securitate">10. Masuri de securitate</h2>
+<ul>
+    <li>Autentificare: cererile la server sunt autentificate pentru a preveni accesul neautorizat.</li>
+    <li>Hashing Password: parolele sunt criptate inainte de a fi stocate in baza de date, asigurand pastrarea confidentialitatii utilizatorilor.</li>
+    <li>Token: folosit pentru a verifica sesiunea de logare.</li>
+</ul>
+
+<h2 id="resurse">11. Resurse</h2>
+<ul>
+    <li><a href="https://www.youtube.com/watch?v=_1xa8Bsho6A&t=1743s" target="_blank">https://www.youtube.com/watch?v=_1xa8Bsho6A&t=1743s</a>.</li>
+    <li><a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/#learn-html-forms-by-building-a-registration-form" target="_blank">https://www.freecodecamp.org/learn/2022/responsive-web-design/#learn-html-forms-by-building-a-registration-form</a>.</li>
+    <li><a href="https://tehnologii-web.vercel.app/">https://tehnologii-web.vercel.app/</a></li>
+</ul>
+
+<h2 id="concluzie">12. Concluzii</h2>
+<p>Aplicatia RoT (Romanian Traffic Signs Tutor) ofera un suport detaliat pentru invatarea regulilor de circulatie si semnelor de circulatie. De asemenea, toate cunostintele dobandite in mediul de invatare al site-ului pot fi testate prin intermediul unor chestionare interactive. Acestea sunt impartite in trei categorii:
+    <ul>
+        <li>Chestionare de dificultate scazuta: 
+            <ul>
+                <li>fara limita de timp</li>
+                <li>numar infinit de hint-uri pentru intrebarile chestionarului</li>
+                <li>numar maxim de greseli: 10</li>
+            </ul>
+        </li>
+        <li>Chestionare de dificultate scazuta :</li>
+        <ul>
+            <li>limita de timp : 30 minute</li>
+            <li>numar de hint-uri pentru intrebarile chestionarului: 5</li>
+            <li>numar maxim de greseli: 6</li>
+        </ul>
+        <li>Chestionare de dificultate ridicata: </li>
+        <ul>
+            <li>limita de timp : 15 minute</li>
+            <li>nu exista posibilitatea de a primi hint-uri pentru intrebarile chestionarului</li>
+            <li>numar maxim de greseli: 6</li>
+        </ul>
+    </ul>
+    <p>In concluzie, aplicatia RoT ofera toate etapele de invatare necesare pentru promovarea testului teoretic pentru permisul de conducere.</p>
+</p>
+
+
+</article>
+</body>
+</html>
+

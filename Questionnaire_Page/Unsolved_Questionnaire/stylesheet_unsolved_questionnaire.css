@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main-section{
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Tahoma, sans-serif;
+    gap: 1em;
+    height : 10rem;
+    width: 80%;
+    margin : 9.4rem auto;
+    padding: 5px 5px;
+    background-color : #1ca3e638;
+    color: rgb(18, 18, 113);
+    border-radius: 15px;
+}
+
+@media screen and (min-width:900px) {
+    .main-section{
+        width: 50%;
+    }
+}

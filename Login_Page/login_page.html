@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RoT</title>
+        <link rel="stylesheet" href="stylesheet_account_button.css">
+        <link rel="icon" href="images/logo.png" type="image/x-icon">
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    </head>
+<body>
+    <div class="login">
+        <h1 id="title">Login</h1>
+        <p id="description">Please fill in with the required information.</p>
+        <div class="information">
+            <form method="post" action="#">
+                <div class="first-section">
+                    <fieldset>
+                        <label for="username">Enter Your Username: <input class="first-section-item" id="username" name="username" type="username" required></label>
+                        <label for="password">Enter Your Password: <input class="first-section-item" id="password" name="password" type="password" pattern="[A-Za-z0-9]{5,}" required></label>
+                    </fieldset>
+                </div>
+                <input id="submit" type="submit" value="Submit">
+                <div class="last-section">
+                    <p id="signup" class="last-section-item"><a href="../Sign_Up_Page/sign_up_page.html" class="signup-a">Don't have account? Sign up!</a></p>
+                    <p id="signup" class="last-section-item"><a href="../Forgot_Password_Page/forgot_password_page.html" class="signup-a">Forgot your password? Click here to reset it!</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoT</title>
+    <link rel="stylesheet" href="../stylesheet_header.css">
+    <link rel="stylesheet" href="stylesheet_buttons.css">
+    <link rel="stylesheet" href="../stylesheet_footer.css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    
+</head>
+<body>
+    <header>
+        <div class="first-part-header">
+            <a href="../index.html"><img id="logo" src="images/logo.png" alt="Logo"></a>
+            <h1>Romanian Traffic Signs Tutor</h1>
+            <p id="account"><a href="../Login_Page/login_page.html" id="account-button">Account</a></p>
+        </div>
+        <div class="border">
+            <ul id="unordered-list-border">
+                <li class="unordered-list-border-item"><a class="top-button" href="../index.html">BACK</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="learning-environment-section">
+        <div class="environment-item" id="ei1">
+            <a href="../Learn_Traffic_Rules_Page/learn_traffic_rules.html" class="traffic-rules-button">
+                <h2 id="traffic-rules-center">Invata regulile de circulatie</h2>
+            </a>
+        </div>
+        <div class="environment-item"  id="ei2">
+            <a href="../Sign_Types_Page/sign_types.html" class="traffic-signs-button">
+                <h2 id="traffic-signs-center">Invata semnele de circulatie</h2>
+            </a>
+        </div>
+    </section>
+    <footer>
+        <div class="divider_footer"></div>
+        <p class="copyrights">@Copyright Emil&Vero srl. All rights reserved</p>
+        <p class="footer_text">Contact:</p>
+        <p class="footer_text">Emil: cosmaemil1414@gmail.com</p>
+        <p class="footer_text">Veronica: capleaveronica29@gmail.com</p>
+    </footer>
+    <script>
+        const accountButton = document.getElementById('account-button');
+        const token = localStorage.getItem('token');
+        const questionnaireButton=document.getElementById('questionnaire_button');
+        if (token) {
+            accountButton.href = '../Profile_Page/profile_page.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+    
+body{
+    background-color: #0e0f7d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color : rgb(236, 247, 247);
+    background-color: rgb(236, 247, 247);
+    width : min(91vw, 51em);
+    margin : 10.4em auto; 
+    border-radius: 10px;
+    padding: 5em;
+}
+
+.information{
+
+    display: flex;
+    align-items: center;
+    flex-direction : column;
+    width : min(72vw, 39em);
+}
+
+#title{
+    display: flex;
+    text-align: center;
+    font-family: Tahoma, sans-serif;
+    color : #0e0f7d;
+}
+
+#description{
+    display: flex;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    color : #0e0f7d;
+    margin-top : 1em;
+    margin-bottom: 1.5em;
+}
+
+fieldset{
+    border: none;
+}
+
+.fieldset-item{
+    padding-bottom: 1em;
+    border: none;
+    width: 100%;
+}
+
+.fieldset-item:focus {
+    outline: none;
+    border: 2px solid rgb(244, 244, 65);
+}
+
+.fieldset-item{
+    border-radius: 4px;
+
+}
+
+.fieldset-item, #submit{
+    color : rgb(236, 247, 247);
+    background-color: #0e0f7d;
+    border: none;
+}
+
+#bio{
+    background-color: #0e0f7d;
+    color: rgb(236, 247, 247);
+    border: none;
+}
+
+#bio:focus {
+    outline: none;
+    border: 2px solid rgb(244, 244, 65);
+}
+
+textarea{
+    resize: none;
+    padding: 4px 7px;
+}
+
+textarea::placeholder {
+    color: rgba(236, 247, 247, 0.684); 
+}
+
+label {
+    display: block;
+    font-family: Helvetica, sans-serif;
+    color : #0e0f7d;
+    padding-bottom: 1em;
+}
+
+#terms-and-conditions{
+    background-color: #0e0f7d;
+}
+
+.terms-and-conditions{
+    padding-top: 1.5em;
+}
+
+#submit{
+    padding : 0.2em 0.5em;
+    font-family: Helvetica, sans-serif;
+    font-size: min(3vw, 1em);
+    border-radius: 6px;
+    margin-top: 1vh;
+    height : max(4vh, 1.8em);
+    text-decoration: none;
+}
+
+#submit:hover{
+    background-color: #2d2e9cc0;
+}
+
+#submit:active{
+    color : yellow;
+}

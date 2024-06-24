@@ -1,0 +1,68 @@
+#signs-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    padding: 1.1rem;
+    margin-left: 10rem;
+    margin-top: 2rem;
+    width: 80%;
+    background-color: #0e0f7d;
+    border-radius: 15px;
+}
+p, h2, h3, h4, .last-section-item{
+    color : rgb(18, 18, 113);
+    font-family: Helvetica, sans-serif;
+}
+.sign-box {
+    width: 21.5rem;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #a3d3ff;
+    border-radius: 15px;
+}
+
+.sign-box img {
+    width: 70%;
+    max-width: 500px;
+}
+
+.sign-box h2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sign-box.expanded h2 {
+    white-space: normal;
+}
+
+.sign-box p {
+    display: none;
+    text-align: left;
+}
+
+.sign-box.expanded {
+    flex: 1 0 100%;
+    max-width: 100%;
+}
+
+.sign-box.expanded p {
+    display: block;
+}
+.sign-box.expanded img {
+    width: 50%;
+    max-width: 20rem;
+}
+
+.sign-box a {
+    display: block;
+    text-decoration: none; /* Remove underline from anchor */
+    color: inherit; 
+   
+}

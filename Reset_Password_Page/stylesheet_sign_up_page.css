@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+    
+body{
+    background-color: #0e0f7d;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color : rgb(236, 247, 247);
+    background-color: rgb(236, 247, 247);
+    width : min(77vw, 37em);
+    margin : 12.5rem auto; 
+    border-radius: 10px;
+    padding: 2em 7px 2em 0;
+}
+
+.information{
+    display: flex;
+    flex-direction : column;
+    width : min(56vw, 27em);
+    padding : 7px;
+}
+
+#title{
+    font-family: Tahoma, sans-serif;
+    color : #0e0f7d;
+}
+
+#description{
+    margin-top : 1.2em;
+    margin-bottom: 3em;
+    font-family: Helvetica, sans-serif;
+    color : #0e0f7d;
+}
+
+fieldset{
+    border: none;
+
+}
+
+label {
+    display: block;
+    font-family: Helvetica, sans-serif;
+    color : #0e0f7d;
+}
+
+.first-section-item{
+    margin-bottom : 2.3vh;
+    border-radius: 4px;
+    height: 1.7em;
+}
+
+.first-section-item, #submit{
+    color : rgb(236, 247, 247);
+    background-color: #0e0f7d;
+    border: none;
+}
+
+.first-section{
+    margin-bottom: 1.5em;
+    
+}
+
+#terms-and-conditions{
+    background-color: #0e0f7d;
+}
+
+#submit{
+    padding : 0.2em 0.5em;
+    font-family: Helvetica, sans-serif;
+    font-size: min(3vw, 1em);
+    border-radius: 6px;
+    margin-top: 1vh;
+    height : max(4vh, 1.8em);
+}
+
+#submit:hover{
+    background-color: #2d2e9cc0;
+}
+
+#submit:active{
+    color : yellow;
+}
+
+.first-section-item:focus {
+    outline: none;
+    border: 2px solid rgb(244, 244, 65);
+}
+
+input{
+    padding: 1px 4px;
+}

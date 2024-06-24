@@ -1,0 +1,211 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.divider{
+    background-color : #1ca3e638;
+    height : 0.5em;
+    width: 95%;
+    margin : 2em;
+    border-radius: 10px;
+}
+
+.learning-environment-section{
+    display : flex;
+    flex-direction: column;
+    gap : 1rem;
+    margin: 1.5rem;
+}
+
+.theory-button, .questionnaire-button {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    width : 100%;
+    height: min(115vh, 30em);
+    margin: 1vh 0;
+    border-radius: 10px;
+    padding: 0;
+    font-weight: bolder;
+}
+
+.theory-button{
+    background-image: url(./images/1Z_2103.w026.n002.268B.p1.268.jpg);
+}
+
+.questionnaire-button{
+    background-position: center center;
+    background-image: url(./images/traffic_signs_1.webp);
+}
+
+.theory-button, .questionnaire-button, #about-button, #help-button{
+    background-size: cover;
+    text-decoration: none;
+}
+
+.learning-environment-section-item{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+#about-button, #help-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width : 100%;
+    height: min(90vh, 5em);
+    font-family: Tahoma, sans-serif;
+    border-radius: 10px;
+    background-color:rgb(18, 18, 113);
+}
+
+
+@media screen and (min-width:950px) {
+    #ei1{
+        padding-right: 4%; 
+    }
+
+    #ei2{
+        padding-left :4%; 
+    }
+
+    #about-button{
+        margin-left: auto;
+    }
+
+    .learning-environment-section-item{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    #about-button, #help-button{
+        background-color:rgb(18, 18, 113);
+        display : flex;
+        justify-content: center;
+        align-items: center;
+        width : 100%;
+        height: min(120vh, 30em);
+        margin: 1vh 0;
+        border-radius: 10px;
+    }
+
+    .environment-item{
+        display: flex;
+        width: min(60em, 70vw);
+    }
+}
+
+#about-button-center, #help-button-center{
+    background-color: rgb(236, 247, 247);
+    color: #0e107dd5;
+}
+
+@media screen and (min-width:950px){
+    #about-button-center, #help-button-center{
+        margin: 1em;
+    }
+}
+
+
+#theory-button-center, #questionnaire-button-center{
+    margin: 1em;
+}
+
+#theory-button-center, #questionnaire-button-center{
+    color: rgb(236, 247, 247);
+    background-color: rgba(14, 16, 125, 0.822);
+}
+
+#theory-button-center:hover, #questionnaire-button-center:hover{
+    color : rgb(236, 247, 247);
+    background-color: rgba(48, 50, 162, 0.822);
+}
+
+#about-button-center:hover, #help-button-center:hover{
+    filter: brightness(110%);
+}
+
+#theory-button-center:active, #questionnaire-button-center:active, #about-button:active, #help-button:active{
+    color : yellow;
+}
+
+.theory-button:hover, .questionnaire-button:hover, #about-button:hover, #help-button:hover, #about-button-center:hover{
+    filter: brightness(110%);
+}
+
+#theory-button-center, #questionnaire-button-center{
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+    font-size: 2.1em;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+#about-button-center, #help-button-center{
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+#best-users-section {
+    display : flex;
+    flex-direction: column;
+    gap : 1rem;
+    margin: 1.5rem;
+    height : 22rem;
+    width: 90%;
+    margin : 0 auto;
+    background-color : #1ca3e638;
+    border-radius: 15px;
+}
+
+.best-users-item{
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#best-users-title{
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+    font-size: 2.3em;
+    color : rgb(18, 18, 113);
+    padding-top : 0.3em;
+}
+
+.users{
+    display: flex;
+    flex-direction: column;
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+    margin-top: 0.5em;
+    color :rgb(48, 48, 154);
+}
+
+.user{
+    margin-top:1.5em;
+}
+
+#scrollToTop{
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgb(18, 18, 113);
+    color: yellow;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 20%;
+    display: none; /* Ascuns inițial */
+  }
+

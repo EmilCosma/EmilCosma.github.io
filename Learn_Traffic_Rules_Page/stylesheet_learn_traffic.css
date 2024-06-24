@@ -1,0 +1,108 @@
+body{
+    font-family: Helvetica;
+}
+
+#chapter1, #chapter2, #chapter3{
+    font-size: 1.5em;
+    letter-spacing: .0375em;
+    margin-top: 2em;
+    margin-bottom: 1rem;
+    font-family: Helvetica;
+    color:rgb(18, 18, 113);
+}
+
+#title{
+    display : flex;
+    justify-content: center;
+    font-size: 2em;
+}
+
+p{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.text-container {
+    display: block;
+    width: calc(100% - 150px);
+    background-color: #1ca3e638;
+    color:rgb(18, 18, 113);
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: 2rem;
+    flex-direction: column; 
+    padding: 1rem; 
+    font-family: Tahoma, sans-serif;
+    border-radius: 15px;
+}
+
+.text-content {
+    margin: 1rem;
+    text-align: left;
+}
+
+.container{
+    display:flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding-left: 2rem;
+}
+
+h3 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    color:rgb(18, 18, 113);
+    font-weight: bold;
+}
+
+.toc {
+    position: fixed;
+    top: 15rem;
+    left: 0;
+    width: min(8rem, 18vw);
+    padding: 20px;
+    border-right: 2px solid rgb(18, 18, 113);
+    color:rgb(18, 18, 113);
+    font-family: Tahoma, sans-serif;
+}
+
+ ul{
+    display: block;
+    position: relative;
+    padding: 0;
+}
+
+.instance{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0.3em;
+}
+
+.instance::after{
+    content:"";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(18, 18, 113);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.instance:hover::after{
+    visibility: visible;
+    width: 100%;
+}
+
+.instance:hover:active::after{
+    background-color: yellow;
+}
+
+#cuprins{
+    margin-bottom: 0.5em;
+}
+
+a{
+    text-decoration: none;
+    color:rgb(18, 18, 113);
+}

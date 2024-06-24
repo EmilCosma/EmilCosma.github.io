@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoT</title>
+    <link rel="stylesheet" href="stylesheet_questionnaire.css">
+    <link rel="stylesheet" href="../stylesheet_footer.css">
+    <link rel="stylesheet" href="../stylesheet_header.css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="first-part-header">
+            <a href="../../index.html"><img id="logo" src="images/logo.png" alt="Logo"></a>
+            <h1>Romanian Traffic Signs Tutor</h1>
+            <p id="account"><a href="../../Account_Button_Page/account_button_page.html" id="account-button">Account</a></p>
+        </div>
+        <div class="border">
+            <ul id="unordered-list-border">
+                <li class="unordered-list-border-item"><a class="top-button" href="../questionnaire_page.html">BACK</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="questionnaire-info">
+            <h2 id="correct-answers"></h2>
+            <h2 id="incorrect-answers"></h2>
+        </div>
+        <div class="main-section">
+            <div class="info-section">
+                <h2 id="answered_questions">Intrebari raspunse : 12</h2>
+                <h2 id="question_number">Intrebarea ? </h2>
+                <h2 id="question_remaining">Intrebari ramase : 14</h2>
+            </div>
+            <h2 id="question"></h2>
+            <div id="question-section">
+                <div id="image-container">
+                    <img id="image_question" class="image" src="images/poza_chestionar.jpg" alt="Poza corespunzatoare intrebarii prezentate.">
+                </div>
+                <div class="answers">
+                    <div class="answer-item">
+                        <p class="option">A</p>
+                        <div id="option1" class="answer"></div>
+                    </div>
+                    <div class="answer-item">
+                        <p class="option">B</p>
+                        <div id="option2" class="answer"></div>
+                    </div>
+                    <div class="answer-item">
+                        <p class="option">C</p>
+                        <div id="option3" class="answer"></div>
+                    </div>
+                </div>
+            </div>
+            <p id="hint">Nu te descurci? Hai sa iti dau un indiciu! Ramane secret!</p>
+        </div>
+        <div class="change-question">
+            <h2 id="skip-question"><a href="#" class="another-question">Sari peste</a></h2>
+            <h2 id="submit-question"><a href="#" class="another-question">Inregistreaza raspunsul</a></h2>
+        </div>
+    </main>
+    <footer>    
+        <div class="divider_footer"></div>
+        <p class="copyrights">@Copyright Emil&Vero srl. All rights reserved</p>
+        <p class="footer_text">Contact:</p>
+        <p class="footer_text">Emil: cosmaemil1414@gmail.com</p>
+        <p class="footer_text">Veronica: capleaveronica29@gmail.com</p>
+    </footer>
+    <div id="popup" class="popup"></div>
+    <script src="questionnaire_script.js"></script>
+    <script>
+        const accountButton = document.getElementById('account-button');
+        const token = localStorage.getItem('token');
+        const questionnaireButton=document.getElementById('questionnaire_button');
+        if (token) {
+            accountButton.href = '../../Profile_Page/profile_page.html';
+        }
+    </script>
+</body>

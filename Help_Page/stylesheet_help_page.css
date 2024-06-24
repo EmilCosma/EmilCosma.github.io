@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container{
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    gap : 1rem;
+    width: 90%;
+    margin : 3rem auto 1.5em auto;
+    padding: 1.5em 2em;
+    background-color : #1ca3e638;
+    color:rgb(18, 18, 113);
+    font-family: Tahoma, sans-serif;
+    border-radius: 15px;
+    
+}
+
+#chapters{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color:rgb(18, 18, 113);
+}
+
+a:active{
+    color: yellow;
+}
+
+a:hover{
+    color: rgba(14, 16, 125, 0.822);
+}
+
+#title{
+    display : flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 2em;
+    color : rgb(18, 18, 113);
+    padding-bottom: 0.3em;
+}
+
+#chapters{
+    padding-left: 30px;
+}
+
+.subsection{
+    margin-left: 35px;
+}
+
+#chapters-title{
+    font-size: 1.5em;
+    margin-bottom: 0.7em;
+}
+
+.chapter{
+    font-size: 1.5em;
+    letter-spacing: .0375em;
+    margin-top: 2em;
+}
+
+.sub-chapter{
+    letter-spacing: .0300em;
+    font-size: 1.2em;
+    margin: 1em 1em 0em 2em;
+}
+
+.chapter-paragraph{
+    margin-left: 2em;
+}
+
+.sub-chapter-paragraph{
+    margin-left: 3em;
+}

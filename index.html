@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoT</title>
+    <link rel="stylesheet" href="stylesheet_index.css">
+    <link rel="stylesheet" href="stylesheet_footer.css">
+    <link rel="stylesheet" href="stylesheet_header.css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="first-part-header">
+            <a href="index.html"><img id="logo" src="images/logo.png" alt="Logo"></a>
+            <h1>Romanian Traffic Signs Tutor</h1>
+            <p id="account"><a href="Login_Page/login_page.html" id="account-button">Account</a></p>
+        </div>
+        <div class="border">
+            <nav>
+                <ul id="unordered-list-border">
+                    <!--<li class="unordered-list-border-item"><a class="top-button" href="#animation-section">TOP</a></li> -->
+                    <!--<li class="unordered-list-border-item"><a class="top-button" href="#learning-environment-section">MEDIU DE INVATARE</a></li> -->    
+                    <li class="unordered-list-border-item"><a class="top-button" href="#best-users-section">TOP 5 UTILIZATORI</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="animation-section"></section>
+        <section class="learning-environment-section">
+            <div class="learning-environment-section-item">
+                <div class="environment-item" id="ei1">
+                    <a href="Select_Between/select_between.html" class="theory-button">
+                        <h2 id="theory-button-center">Invata regulile rutiere</h2>
+                    </a>
+                </div>
+                <div id="about-page">
+                    <a href="About_Page/about_page.html" id="about-button">
+                        <h2 id="about-button-center">Despre noi</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="learning-environment-section-item">
+                <div id="help-page">
+                    <a href="Help_Page/help_page.html" id="help-button">
+                        <h2 id="help-button-center">Manual de navigare site</h2>
+                    </a>
+                </div>
+                <div class="environment-item"  id="ei2">
+                    <a href="Login_Page/login_page.html" id="questionnaire_button" class="questionnaire-button">
+                        <h2 id="questionnaire-button-center">Aplica cunostintele invatate</h2>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div class="divider"></div>
+        <section id="best-users-section">
+            <div class="best-users-item">
+                <h2 id="best-users-title">Top 5 Utilizatori</h2>
+                <div class="users">
+                    <h3 class="user">1.</h3>
+                    <h3 class="user">2.</h3>
+                    <h3 class="user">3.</h3>
+                    <h3 class="user">4.</h3>
+                    <h3 class="user">5.</h3>
+                </div>
+            </div>
+        </section>
+        <button id="scrollToTop" title="Go to top">↑</button>
+    </main>
+    <footer>
+        <div class="divider_footer"></div>
+        <p class="copyrights">@Copyright Emil&Vero srl. All rights reserved</p>
+        <p class="footer_text">Contact:</p>
+        <p class="footer_text">Emil: cosmaemil1414@gmail.com</p>
+        <p class="footer_text">Veronica: capleaveronica29@gmail.com</p>
+    </footer>
+    <script src="get-best-users.js"></script>
+    <script>
+        const accountButton = document.getElementById('account-button');
+        const token = localStorage.getItem('token');
+        const questionnaireButton=document.getElementById('questionnaire_button');
+        if (token) {
+            accountButton.href = 'Profile_Page/profile_page.html';
+            questionnaireButton.href = 'Questionnaire_Page/questionnaire_page.html';
+        }
+    </script>
+    <script src="scroll_to_top_button.js"></script>
+</body>
+</html>

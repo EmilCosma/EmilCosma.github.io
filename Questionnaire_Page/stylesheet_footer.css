@@ -1,0 +1,28 @@
+.divider_footer{
+    background-color : #1ca3e638;
+    height : 0.5em;
+    width: 95%;
+    margin: 2em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+}
+
+footer{
+    height: 10vh;
+    width: 100%;
+    position: absolute;
+    
+}
+.footer_text{
+   font-family: Helvetica;
+   font-size: 0.7rem;
+   text-align: center;
+   margin-bottom: 2px;
+}
+.copyrights{
+    padding-left: 1rem;
+    padding-bottom: 0.3rem;
+    font-family: Helvetica;
+    font-size: 0.8rem;
+    text-align: center;
+ }

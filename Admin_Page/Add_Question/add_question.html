@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoT</title>
+    <link rel="stylesheet" href="stylesheet_add_question.css">
+    <link rel="icon" href="../images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="main-section">
+        <h1 id="title">Adaugare intrebare chestionar noua</h1>
+        <p id="description">Completeaza cu informatiile cerute.</p>
+        <div class="information">
+            <form method="post" action="#">
+                <fieldset>
+                    <label class="first-fieldset" for="question">Ce intrebare doresti sa adaugi? <textarea class="first-fieldset-item" id="question" name="question" rows="4" cols="80" placeholder="Scrieti intrebarea..." required></textarea></label>
+                    <div class="divider"></div>
+                    <label class="first-fieldset" for="answer-A">Raspuns A: <textarea class="first-fieldset-item" id="answer-A" name="answer-A"  rows="3" cols="80" placeholder="Scrieti raspunsul A..." required></textarea></label>
+                    <p>Este raspunsul A corect? (0 - incorect, 1 - corect)</p>
+                    <div class="checkbox-container">
+                        <input type="radio" id="solution-A-0" name="solution-A" value="0" checked>
+                        <label for="solution-A-0">0</label>
+                        <input type="radio" id="solution-A-1" name="solution-A" value="1" >
+                        <label for="solution-A-1">1</label>
+                    </div>
+                    <div class="divider"></div>
+                    <label class="first-fieldset" for="answer-B">Raspuns B: <textarea class="first-fieldset-item" id="answer-B" name="answer-B"  rows="3" cols="80" placeholder="Scrieti raspunsul B..." required></textarea></label>
+                    <p>Este raspunsul B corect? (0 - incorect, 1 - corect)</p>
+                    <div class="checkbox-container">
+                        <input type="radio" id="solution-B-0" name="solution-B" value="0" checked>
+                        <label for="solution-B-0">0</label>
+                        <input type="radio" id="solution-B-1" name="solution-B" value="1" >
+                        <label for="solution-B-1">1</label>
+                    </div>
+                    <div class="divider"></div>
+                    <label class="first-fieldset" for="answer-C">Raspuns C: <textarea class="first-fieldset-item" id="answer-C" name="answer-C" rows="3" cols="80" placeholder="Scrieti raspunsul C..." required></textarea></label>
+                    <p>Este raspunsul C corect? (0 - incorect, 1 - corect)</p>
+                    <div class="checkbox-container">
+                        <input type="radio" id="solution-C-0" name="solution-C" value="0" checked>
+                        <label for="solution-C-0">0</label>
+                        <input type="radio" id="solution-C-1" name="solution-C" value="1" >
+                        <label for="solution-C-1">1</label>
+                    </div>
+                </fieldset>
+                <div class="divider"></div>
+                <fieldset>
+                    <label class="second-fieldset" for="hint">Scrieti indiciul corespunzator intrebarii adaugate:
+                        <textarea id="hint" name="hint" rows="4" cols="80" placeholder="Scrieti indiciul..."></textarea>
+                    </label>
+                </fieldset>
+                <input id="submit" type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <script src="add_question.js"></script>
+</body>

@@ -1,0 +1,88 @@
+body{
+    background-color: #0e0f7d;
+}
+
+#title{
+    padding: 0.5em 0 0.5em 0;
+    font-family: Tahoma, sans-serif;
+    color : #0e0f7d;
+    text-align: center;
+}
+
+.main-section{
+    color : rgb(236, 247, 247);
+    background-color: rgb(236, 247, 247);
+    width : min(90vw, 60em);
+    width: 70%;
+    margin : 8.9rem auto; 
+    border-radius: 10px;
+    padding: 0 2px;
+}
+
+.container{
+    display: grid;
+    gap: 2rem;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin : 1rem auto; 
+}
+.option{
+    width: 100%;
+    padding : 0;
+}
+
+.option a {
+    margin: 0;
+    padding: 0;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    color : rgb(236, 247, 247);
+    background-color : #0e107dd5;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+}
+
+.button-center{
+    padding: 3px;
+}
+
+@media screen and (min-width:700px) {
+    .container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .button{
+        height : max(10vh, 5em);
+    }
+}
+
+#back-button-container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.2em;
+    
+}
+
+#back-button{
+    text-decoration: none;
+    color: #0e0f7d;
+    margin-bottom: 1em;
+}
+
+#back-button:hover{
+    color:  #2d2e9cc0;
+}
+
+#back-button:active{
+    color: yellow;
+}

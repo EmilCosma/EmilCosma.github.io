@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoT</title>
+    <link rel="stylesheet" href="stylesheet_questionnaire.css">
+    <link rel="stylesheet" href="stylesheet_footer.css">
+    <link rel="stylesheet" href="stylesheet_header.css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="first-part-header">
+            <a href="../index.html"><img id="logo" src="images/logo.png" alt="Logo"></a>
+            <h1>Romanian Traffic Signs Tutor</h1>
+            <p id="account"><a href="../Login_Page/login_page.html" id="account-button">Account</a></p>
+        </div>
+        <div class="border">
+            <ul id="unordered-list-border">
+                <li class="unordered-list-border-item"><a class="top-button" href="../index.html">BACK</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="questionnaire-type">
+            <h2 id="difficulty-section-title">Alege dificultatea chestionarelor</h2>
+            <div class="difficulty-buttons">
+                <div class="difficulty-item">
+                    <a href="Easy_Questionnaire/easy_questionnaire.html" class="button">
+                        <h3 class="button-center">Dificultate scazuta</h3>
+                    </a>
+                </div>
+                <div class="difficulty-item">
+                    <a href="Medium_Questionnaire/medium_questionnaire.html" class="button">
+                        <h3 class="button-center">Dificultate medie</h3>
+                    </a>
+                </div>
+                <div class="difficulty-item">
+                    <a href="Hard_Questionnaire/hard_questionnaire.html" class="button">
+                        <h3 class="button-center">Dificultate ridicata</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>    
+        <div class="divider_footer"></div>
+        <p class="copyrights">@Copyright Emil&Vero srl. All rights reserved</p>
+        <p class="footer_text">Contact:</p>
+        <p class="footer_text">Emil: cosmaemil1414@gmail.com</p>
+        <p class="footer_text">Veronica: capleaveronica29@gmail.com</p>
+    </footer>
+    <script>
+        const accountButton = document.getElementById('account-button');
+        const token = localStorage.getItem('token');
+        const questionnaireButton=document.getElementById('questionnaire_button');
+        if (token) {
+            accountButton.href = '../Profile_Page/profile_page.html';
+        }
+    </script>
+</body>

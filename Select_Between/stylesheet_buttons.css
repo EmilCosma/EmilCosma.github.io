@@ -1,0 +1,74 @@
+.learning-environment-section{
+    display : flex;
+    flex-direction: column;
+    gap : 1rem;
+    margin: 1.5rem;
+}
+
+.traffic-rules-button, .traffic-signs-button {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    width : 100%;
+    height: min(110vh, 25em);
+    margin: 1vh 0;
+    border-radius: 10px;
+    padding: 0;
+    color: black;
+    /* font-size: 2rem; */
+    font-weight: bolder;
+    
+}
+
+.traffic-rules-button{
+    background-position: center center ;
+    background-image: url(./images/traffic_rules.jpg);
+}
+
+.traffic-signs-button{
+    background-image: url(./images/traffic_signs.webp);
+}
+
+.traffic-rules-button, .traffic-signs-button{
+    background-size: cover;
+    text-decoration: none;
+}
+
+@media screen and (min-width:800px) {
+    #ei1{
+        padding-right :40%; 
+    }
+}
+
+@media screen and (min-width:800px) {
+    #ei2{
+        padding-left :40%; 
+    }
+}
+
+
+#traffic-rules-center, #traffic-signs-center {
+    color: rgb(236, 247, 247);
+    background-color: rgba(14, 16, 125, 0.822);
+}
+
+#traffic-rules-center:hover, #traffic-signs-center:hover{
+    color : rgb(236, 247, 247);
+    background-color: rgba(48, 50, 162, 0.822);
+}
+
+#traffic-rules-center:active, #traffic-signs-center:active{
+    color : yellow;
+}
+
+.traffic-rules-button:hover, .traffic-signs-button:hover {
+    filter: brightness(110%);
+}
+
+#traffic-rules-center, #traffic-signs-center{
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+    font-size: 2.1em;
+    padding: 10px 20px;
+    border-radius: 10px;
+}

@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.questionnaire-type{
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap : 1rem;
+    height : 30rem;
+    width: 90%;
+    margin : 3rem auto;
+    background-color : #1ca3e638;
+    border-radius: 15px;
+    padding: 1em 7px 2em 0;
+}
+
+#difficulty-section-title{
+    display : flex;
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+    font-size: 2em;
+    color : rgb(18, 18, 113);
+    margin-bottom: 10px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: min(60vw, 45em);
+    height : 5em;
+    color : rgb(236, 247, 247);
+    background-color : #0e107dd5;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: Tahoma, sans-serif;
+    margin-top: 1.5em;
+}
+
+.button:hover{
+    background-color: rgba(48, 50, 162, 0.822);
+}
+
+.button:active{
+    color : yellow;
+}
+
+.difficulty-buttons{
+    display : flex;
+    flex-direction : column;
+    text-align : center;
+    justify-content: center;
+    margin : 0 20em;
+    width : min(60vw, 45em);
+}

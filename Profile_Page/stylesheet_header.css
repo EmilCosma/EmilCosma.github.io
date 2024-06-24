@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.first-part-header{
+    display : flex;
+    align-items: center;
+    background-color: rgb(236, 247, 247);
+}
+
+#logo {
+    width: max(3.5rem, 7.5vw);
+}
+
+h1 {
+    color: rgb(18, 18, 113);
+    font-size: min(4.5vw, 2.5rem);
+    width: 90vw;
+    font-family: Tahoma, sans-serif;
+}
+
+#account{
+    margin-left: auto;
+    margin-right: 20px;
+    border: none;
+    font-size: min(2vw, 1.3em);
+    font-family: Helvetica, sans-serif;
+}
+
+#account-button{
+    text-decoration: none;
+    color : rgb(238, 249, 249);
+    background-color: #17198e;
+    padding : 8px 14px;
+    border-radius: 10px;
+}
+
+#account-button:hover{
+    color : rgb(236, 247, 247);
+    background-color: #2f31a6;
+}
+
+#account-button:active{
+    color : rgb(252, 241, 92);
+}
+
+.border{
+    background-color: #0e0f7d;
+    width : 100vw;
+    padding: 0.5em 0 0.5em 0;
+}
+
+#unordered-list-border{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: Helvetica, sans-serif;
+}
+
+#unordered-list-border .top-button {
+    position: relative;
+    text-decoration: none;
+}
+
+#unordered-list-border .top-button::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(197, 232, 232);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+#unordered-list-border .top-button:hover::after {
+    visibility: visible;
+    width: 100%;
+}
+
+#unordered-list-border .top-button:hover:active::after {
+    background-color: yellow;
+}
+
+.unordered-list-border-item{
+    list-style-type: none;
+}
+
+.top-button{
+    color : rgb(197, 232, 232);
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.top-button:active {
+    color : yellow;
+}

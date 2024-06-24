@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoT</title>
+    <link rel="stylesheet" href="stylesheet_add_sign_page.css">
+    <link rel="icon" href="../images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="main-section">
+        <h1 id="title">Adaugare semn</h1>
+        <p id="description">Completeaza cu informatiile cerute.</p>
+        <div class="information">
+            <form method="post" action="#">
+                <fieldset>
+                    <label for="name">Numele semnului: <input class="fieldset-item" id="name" name="name" type="text" required></label>
+                    <label for="text">Scrie explicatia semnului: <textarea class="fieldset-item-textarea" id="text" name="text" rows="6" cols="60" placeholder="Scrieti explicatia semnului..." required></textarea></label>
+                    <label for="type">Tipul semnului: <input class="fieldset-item" id="type" name="type" type="text" required></label>
+                    <label for="image_url">Url-ul pentru imagine: <input class="fieldset-item" id="image_url" name="image_url" type="text" required></label>
+                </fieldset>
+                <input id="submit" type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <script src="add_sign.js"></script>
+</body>

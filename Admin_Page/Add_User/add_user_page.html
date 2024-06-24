@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoT</title>
+    <link rel="stylesheet" href="stylesheet_add_user_page.css">
+    <link rel="icon" href="../images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="main-section">
+        <h1 id="title">Adaugare utilizator</h1>
+        <p id="description">Completeaza cu informatiile cerute.</p>
+        <div class="information">
+            <form method="post" action="#">
+                <fieldset>
+                    <label for="username">Scrieti numele utilizatorului: <input class="fieldset-item" id="username" name="username" type="text" required></label>
+                    <label for="password">Scrie parola: <input class="fieldset-item" id="password" name="password" type="password" required></label>
+                    <label for="confirm-password">Confirma parola: <input class="fieldset-item" id="confirm-password" name="confirm-password" type="password" required></label>
+                
+                </fieldset>
+                <input id="submit" type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <script src="add_user.js"></script>
+</body>
