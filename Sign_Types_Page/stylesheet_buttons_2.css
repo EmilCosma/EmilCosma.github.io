@@ -1,12 +1,27 @@
+@media screen and (min-width: 1024px) {
+    #signs-container {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    #signs-container {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 #signs-container {
     display: inline-flex;
     flex-wrap: wrap;
     border: 2px solid black;
     padding: 1.1rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
+    ;
     margin-top: 2rem;
-    width: 80%;
+    
     background-color: #0e0f7d;
     border-radius: 15px;
 }
